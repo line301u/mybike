@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/ooo8aqa.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="robots" content="noindex" />
+    <title>Bike Configurator Frontpage</title>
+  </head>
+  <body style="overflow: hidden">
+    <main id="frontpage_main">
+      <div id="frontpage_logo"></div>
+      <div id="frontpage_wheel1">
+        <div></div>
+      </div>
+      <div id="frontpage_type">
+        <h1>MyBike</h1>
+        <p>- Bikes for every occasion</p>
+
+        <button onclick="window.location.href='scroll.html'">Scrolling page</button>
+        <button onclick="window.location.href='configurator.html'">Configurator</button>
+      </div>
+      <div id="frontpage_wheel2">
+        <div></div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+      "use stict";
+
+      window.addEventListener("DOMContentLoaded", runAnimationOnWheels);
+
+      function runAnimationOnWheels() {
+        gsap.to("#frontpage_wheel1 div", { duration: 1, x: 0, opacity: 0.4 });
+        gsap.to("#frontpage_wheel2 div", { duration: 1.5, y: -0, opacity: 0.4 });
+        gsap.to("#frontpage_type h1", { duration: 3, delay: 0.5, opacity: 1 });
+        gsap.to("#frontpage_type p", { duration: 3, delay: 1, opacity: 1 });
+      }
+    </script>
+  </body>
+</html>
